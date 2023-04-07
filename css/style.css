@@ -10,5 +10,78 @@ body img {
     right:0px;
     bottom:0px;
     z-index: -99;
-    opacity:90%;
+    opacity:60%;
+}
+
+#content_container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 1300px;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: solid 1px black;
+}
+
+#header-container .logo {
+    position: relative;
+    top: 4px;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#login-form {
+    position: relative;
+    top: 5px;
+    padding-right: 15px;
+}
+
+#login-form input {
+    border: none;
+    background: none;
+    font-size: 12px;
+    padding: 5px;
+}
+
+#login-form input[type="text"] {
+    border: #696c72 1px solid;
+    border-radius: 4px;
+}
+
+#login-form input[type="submit"] {
+    margin-left: 8px;
+    border-radius: 4px;
+    background-color: #44494c;
+    color: #fff;
+}
+
+#greeting {
+    position: relative;
+    top: 5px;
+    padding-right: 15px;
+    font-size: 20px;
+    margin: 0;
+}
+
+#left-container {
+    position: absolute;
+    top: 150px;
+    left: 95px;
+}
+
+#left-container #welcome {
+    font-size: 40px;
+    margin: 0px;
+}
+
+#left-container #clock {
+    font-size: 60px;
+    margin: 0px;
 }
