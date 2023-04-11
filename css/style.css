@@ -17,9 +17,10 @@ body img {
     margin: 0 auto;
     padding: 0;
     position: relative;
-    width: 1300px;
+    width: 1400px;
 }
 
+/* header */
 #header-container {
     display: flex;
     justify-content: space-between;
@@ -70,10 +71,13 @@ body img {
     margin: 0;
 }
 
+/* section left */
 #left-container {
     position: absolute;
     top: 150px;
     left: 95px;
+    width: 480px;
+    height: 455px;
 }
 
 #left-container #welcome {
@@ -82,6 +86,170 @@ body img {
 }
 
 #left-container #clock {
-    font-size: 60px;
+    font-size: 80px;
     margin: 0px;
+    line-height: 0.9em;
+}
+
+#weather {
+    position: relative;
+    display: block;
+
+    width: 512px;
+    height: 174px;
+}
+
+.weatherImg {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    left: 42px;
+    top: 58px;
+    z-index: 0;
+}
+
+#weather .city {
+    position: absolute;
+    display: block;
+    height: 25px;
+    left: 111px;
+    top: 61px;
+
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #44494d;
+}
+
+#weather .weather {
+    position: absolute;
+    height: 35px;
+    left: 111px;
+    top: 82px;
+
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 35px;
+
+    color: #44494d;
+}
+
+
+/* section right */
+#todo_container {
+    position: absolute;
+    top: 150px;
+    right: 95px;
+    margin-top: 14px;
+    display: block;
+    padding: 26px 23px;
+    width: 480px;
+    height: 455px;
+    background-color : rgb(255, 255, 255);
+    opacity: 70%;
+}
+
+#todo-form {
+    width: inherit;
+    height: 35px;
+}
+
+#todo-form input[type="text"] {
+    width: 95%;
+    height: 35px;
+    background: none;
+    border-style: solid;
+    border-width: 1px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #44494c;
+    color: #44494c;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#todo-form input[type="submit"] {
+    display: inline-block;
+    width: 50px;
+    margin-left: 14px;
+    border: solid 1px;
+    border-radius: 2px;
+    background: none;
+    color: #44494c;
+    font-size: 16px;
+}
+
+#todo-list {
+    display: block;
+    margin: 8px 0;
+    padding: 0;
+    width: 490px;
+    height: 90%;
+    overflow-y: scroll;
+    list-style-type: none;
+}
+
+#todo-list::-webkit-scrollbar {
+    width: 8px;
+}
+#todo-list::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 8px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+#todo-list::-webkit-scrollbar-track {
+    display: none;
+}
+
+#todo-list li {
+    width: 95%;
+    padding: 8px 4px;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 300;
+    color: #44494c;
+    border-bottom: #44494c dotted 0.5px;
+}
+
+#todo-list li span {
+    display: inline-block;
+    width: 84%;
+    line-height: 29px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#todo-list li button:first-child {
+    font-family: Helvetica, sans-serif;
+    display: inline-block;
+    width: 24px;
+    margin: 0 12px 0 0;
+    padding: 2px 0 2px 0;
+    background: none;
+    color: #44494c;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    position: relative;
+    float: left;
+}
+
+#todo-list li button:last-child {
+    display: inline-block;
+    width: 24px;
+    margin-left: 10px;
+    padding: 10px;
+    background: none;
+    color: #44494c;
+    border: none;
+    float: right;
 }
