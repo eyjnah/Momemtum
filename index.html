@@ -19,28 +19,29 @@
         </header>
         
         <main>
-            <article id="left-container">
+            <section id="left-container">
                 <h2 id="welcome"></h2>
                 <h2 id="clock">00:00:00</h2>
                 <div id="weather">
-                    <span></span>
+                    <img class = weatherImg>
+                    <span class="city"></span>
                     <br>
-                    <span></span>
+                    <span class="weather"></span>
                 </div>
                 <div id="quote">
                     <span></span>
                     <span></span>
                 </div>
-            </article>
+            </section>
 
-            <article>
-                <h2></h2>
+            <section id="todo_container">
                 <form id="todo-form">
                     <input type="text" placeholder="Write a To Do and Press Enter" required />
                 </form>
                 <ul id="todo-list"></ul>
-            </article>
+            </section>
         </main>
+    </div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
