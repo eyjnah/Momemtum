@@ -17,14 +17,31 @@ function deleteToDo(event) {
     saveToDos();
 }
 
+function doneToDo(event) {
+    const li = event.target.parentElement;
+    const liSpan = li.querySelector("span");
+    const doneButton = li.querySelector("button");
+    if (doneButton.innerText === "□") {
+        doneButton.innerText = "■";
+        liSpan.style.textDecoration = "line-through";
+    } else {
+        doneButton.innerText = "□";
+        liSpan.style.textDecoration = "none";
+    }
+}
+
 function paintToDo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
+    const doneButton = document.createElement("button");
+    doneButton.innerText = "□";
+    doneButton.addEventListener("click", doneToDo);
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "❌"
+    button.innerText = "X"
     button.addEventListener("click", deleteToDo);
+    li.appendChild(doneButton);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
